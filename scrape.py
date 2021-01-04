@@ -40,7 +40,7 @@ def generate_flag_emoji(country_code):
 
 us_flag_emoji = generate_flag_emoji('US')
 
-stats_str = f'{us_flag_emoji} {datestring}: {total_vaxxed:,} total vaxxed'
+stats_str = f'{us_flag_emoji} {datestring}: {total_vaxxed:,} total doses given'
 source_str = 'https://raw.githubusercontent.com/owid/covid-19-data/master/public/data/vaccinations/vaccinations.csv'
 
 print(f'{stats_str} | {source_str}')
