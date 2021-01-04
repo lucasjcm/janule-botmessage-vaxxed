@@ -1,0 +1,25 @@
+name: Generate static message for the janule vaxxed command with latest data
+
+on:
+  push:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 * * * *"
+
+jobs:
+  scheduled:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the repo
+        uses: actions/checkout@v2
+      - name: Scrape data (every 6 hours)
+        run: |-
+          python3 scrape.py > botmessage.txt
+      - name: If changed, push new message
+        run: |-
+          git config user.name "META__JANULE___AUTOMATED"
+          git config user.email "actions@users.noreply.github.com"
+          git add -A
+          timestamp=$(date -u)
+          git commit -m "Latest data: ${timestamp}" || exit 0
+          git push
