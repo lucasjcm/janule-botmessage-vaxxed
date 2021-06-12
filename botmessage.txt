@@ -1,1 +1,1 @@
-🇺🇸 2021-06-10: 305,687,618 total doses given | https://raw.githubusercontent.com/owid/covid-19-data/master/public/data/vaccinations/vaccinations.csv
+🇺🇸 2021-06-11: 306,509,795 total doses given | https://raw.githubusercontent.com/owid/covid-19-data/master/public/data/vaccinations/vaccinations.csv
